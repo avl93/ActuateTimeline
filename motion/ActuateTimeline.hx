@@ -25,7 +25,6 @@ class ActuateTimeline
 		tlEnd = Math.max(tlEnd, currTime);
 		var newTween : GenericActuator<T> = Actuate.tween(target, duration, properties, false);
 		newTween.delay(tlEnd - currTime);
-		trace(tlEnd - tlStart);
 		tlEnd += duration;
 		return newTween;
 	}
